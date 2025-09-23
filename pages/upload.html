@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Artwork - Online Art Gallery</title>
+  <link rel="stylesheet" href="/App.css" />
+</head>
+<body>
+  <div class="navbar">
+    <h1 class="logo">Online Art Gallery</h1>
+    <nav class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="artworks.html">Gallery</a>
+      <a href="upload.html">Upload</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </nav>
+  </div>
+  <div class="auth-container">
+    <h2>Upload Artwork</h2>
+    <form class="auth-form">
+      <input type="text" placeholder="Title" required />
+      <input type="text" placeholder="Artist" required />
+      <textarea placeholder="Description" required style="padding:10px; border-radius:4px; border:1px solid #ccc; font-size:1rem;"></textarea>
+      <input type="url" placeholder="Image URL" required />
+      <button type="submit">Upload</button>
+      <div class="success" style="display:none">Artwork uploaded!</div>
+    </form>
+  </div>
+</body>
+</html>

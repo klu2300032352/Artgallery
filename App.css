@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+nav a {
+  color: #1976d2;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #125ea2;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.auth-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.auth-form button {
+  margin-top: 8px;
+}
+.error {
+  color: #c62828;
+  margin-top: 8px;
+}
+.success {
+  color: #388e3c;
+  margin-top: 8px;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+  padding: 18px 40px 18px 32px;
+  box-shadow: 0 2px 8px rgba(60,60,100,0.07);
+}
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(60,60,100,0.08);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.08rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+.nav-links a:hover {
+  background: rgba(255,255,255,0.13);
+  text-decoration: none;
+}
+.logout-btn {
+  background: #fff;
+  color: #1976d2;
+  font-weight: 600;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.logout-btn:hover {
+  background: #1976d2;
+  color: #fff;
+}
+
+/* Main Layout */
+.main-app-container {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+.welcome-section {
+  max-width: 700px;
+  margin: 60px auto 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 40px 32px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #444;
+}

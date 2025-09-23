@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment - Online Art Gallery</title>
+  <link rel="stylesheet" href="/App.css" />
+</head>
+<body>
+  <div class="navbar">
+    <h1 class="logo">Online Art Gallery</h1>
+    <nav class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="artworks.html">Gallery</a>
+      <a href="upload.html">Upload</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </nav>
+  </div>
+  <div class="auth-container" style="max-width:500px">
+    <h2>Payment</h2>
+    <form class="auth-form">
+      <div>
+        <label>Amount: </label>
+        <span style="font-weight:bold; font-size:18px">$1000.00</span>
+      </div>
+      <input type="text" placeholder="Enter coupon code" />
+      <button type="button">Apply Coupon</button>
+      <div style="margin-top:8px; color:#388e3c; display:none">Coupon applied! 50% discount.</div>
+      <div style="margin-top:8px; color:#c62828; display:none">Invalid coupon code.</div>
+
+      <label for="payment-method" style="margin-top:12px;">Payment Method:</label>
+      <select id="payment-method" name="payment-method" style="padding:8px; border-radius:4px; border:1px solid #ccc; margin-bottom:8px;" onchange="showPaymentFields()">
+        <option value="card">Credit/Debit Card</option>
+        <option value="upi">UPI</option>
+        <option value="netbanking">Net Banking</option>
+        <option value="paypal">PayPal</option>
+        <option value="gpay">Google Pay</option>
+        <option value="phonepe">PhonePe</option>
+        <option value="amazonpay">Amazon Pay</option>
+        <option value="cod">Cash on Delivery</option>
+      </select>
+      <div id="paypal-fields" style="display:none">
+        <input type="email" placeholder="PayPal Email" />
+      </div>
+      <div id="gpay-fields" style="display:none">
+        <input type="text" placeholder="Google Pay UPI ID or Phone" />
+      </div>
+      <div id="phonepe-fields" style="display:none">
+        <input type="text" placeholder="PhonePe UPI ID or Phone" />
+      </div>
+      <div id="amazonpay-fields" style="display:none">
+        <input type="text" placeholder="Amazon Pay UPI ID or Phone" />
+      </div>
+
+      <div id="card-fields">
+        <input type="text" placeholder="Card Number" />
+        <input type="text" placeholder="MM/YY" />
+        <input type="text" placeholder="CVC" />
+      </div>
+      <div id="upi-fields" style="display:none">
+        <input type="text" placeholder="Enter UPI ID (e.g. name@bank)" />
+      </div>
+      <div id="netbanking-fields" style="display:none">
+        <input type="text" placeholder="Account Holder Name" />
+        <input type="text" placeholder="Bank Name" />
+        <input type="text" placeholder="Account Number" />
+        <input type="text" placeholder="IFSC Code" />
+      </div>
+      <div id="cod-fields" style="display:none">
+        <p style="color:#388e3c; margin:8px 0 0 0;">You will pay in cash upon delivery.</p>
+      </div>
+      <button type="submit" style="margin-top:16px">Pay Now</button>
+    </form>
+  </div>
+</body>
+<script>
+function showPaymentFields() {
+  var method = document.getElementById('payment-method').value;
+  document.getElementById('card-fields').style.display = method === 'card' ? '' : 'none';
+  document.getElementById('upi-fields').style.display = method === 'upi' ? '' : 'none';
+  document.getElementById('netbanking-fields').style.display = method === 'netbanking' ? '' : 'none';
+  document.getElementById('paypal-fields').style.display = method === 'paypal' ? '' : 'none';
+  document.getElementById('gpay-fields').style.display = method === 'gpay' ? '' : 'none';
+  document.getElementById('phonepe-fields').style.display = method === 'phonepe' ? '' : 'none';
+  document.getElementById('amazonpay-fields').style.display = method === 'amazonpay' ? '' : 'none';
+  document.getElementById('cod-fields').style.display = method === 'cod' ? '' : 'none';
+}
+window.onload = showPaymentFields;
+</script>
+</html>
